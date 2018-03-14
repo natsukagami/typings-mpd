@@ -1,0 +1,8 @@
+{
+  "name": "typings-mpd",
+  "version": "1.0.0",
+  "description": "Typings for `mpd` npm package.",
+  "main": "index.js",
+  "author": "Nguyen Pham Cao <natsukagami@gmail.com>",
+  "license": "MIT"
+}
