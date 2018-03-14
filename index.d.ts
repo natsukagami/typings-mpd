@@ -53,4 +53,4 @@ declare namespace mpd {
   function parseKeyValueMessage(msg: string): {[x: string]: any};
 }
 
-export default mpd;
+export = mpd;
