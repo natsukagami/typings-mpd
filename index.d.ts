@@ -13,28 +13,30 @@ type SystemName =|'database'|'update'|'stored_playlist'|'playlist'|'player'|
 declare class mpd extends EventEmitter {
   constructor();
 
-  sendCommand(command: mpd.Command|string, callback: (response: string) => any);
+  sendCommand(command: mpd.Command|string, callback: (response: string) => any):
+      void;
 
   sendCommands(
-      commandList: (mpd.Command|string)[], callback: (response: string) => any);
+      commandList: (mpd.Command|string)[],
+      callback: (response: string) => any): void;
 
-  on(event: 'error', callback: (err: Error) => any);
-  on(event: 'end', callback: () => any);
-  on(event: 'connect', callback: () => any);
-  on(event: 'ready', callback: () => any);
-  on(event: 'system', callback: (systemName: SystemName) => any);
+  on(event: 'error', callback: (err: Error) => any): this;
+  on(event: 'end', callback: () => any): this;
+  on(event: 'connect', callback: () => any): this;
+  on(event: 'ready', callback: () => any): this;
+  on(event: 'system', callback: (systemName: SystemName) => any): this;
 
-  on(event: 'system-database', callback: () => any);
-  on(event: 'system-update', callback: () => any);
-  on(event: 'system-stored_playlist', callback: () => any);
-  on(event: 'system-playlist', callback: () => any);
-  on(event: 'system-player', callback: () => any);
-  on(event: 'system-mixer', callback: () => any);
-  on(event: 'system-output', callback: () => any);
-  on(event: 'system-options', callback: () => any);
-  on(event: 'system-sticker', callback: () => any);
-  on(event: 'system-subscription', callback: () => any);
-  on(event: 'system-message', callback: () => any);
+  on(event: 'system-database', callback: () => any): this;
+  on(event: 'system-update', callback: () => any): this;
+  on(event: 'system-stored_playlist', callback: () => any): this;
+  on(event: 'system-playlist', callback: () => any): this;
+  on(event: 'system-player', callback: () => any): this;
+  on(event: 'system-mixer', callback: () => any): this;
+  on(event: 'system-output', callback: () => any): this;
+  on(event: 'system-options', callback: () => any): this;
+  on(event: 'system-sticker', callback: () => any): this;
+  on(event: 'system-subscription', callback: () => any): this;
+  on(event: 'system-message', callback: () => any): this;
 }
 
 declare namespace mpd {
